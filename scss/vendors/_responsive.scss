@@ -1,0 +1,658 @@
+// mobile first
+// tablet
+@use "../abstracts";
+
+@media screen and (min-width: 36em) {
+  // hero
+  .block-tablet {
+    display: block;
+  }
+
+  // menu-mobile
+  .menu-mobile {
+    --gutter: 40px;
+
+    &__list {
+      inset: 0 40% 0 0;
+    }
+  }
+
+  #menu-mobile__list {
+    --g-x: 40px;
+  }
+
+  .hero {
+    &-content {
+      @include abstracts.flexGap(null);
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &-desc {
+      width: 400px;
+    }
+
+    .row &-images {
+      margin-top: 40px;
+    }
+
+    .row &-deco__icon {
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:nth-of-type(1) {
+        transform: translateX(-112%);
+      }
+
+      &:nth-of-type(3) {
+        transform: translateX(36%);
+      }
+    }
+  }
+
+  // designer
+  .designer-btn {
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  // book
+  .book-deco:nth-of-type(2) {
+    height: 100%;
+  }
+
+  //   footer
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+// pc
+
+@media screen and (min-width: 62em) {
+  .hidden-pc {
+    display: none;
+  }
+
+  .block-pc {
+    display: block;
+  }
+
+  // common
+  %font-h1 {
+    font-size: 8rem;
+    line-height: 0.95; /* 95% */
+    letter-spacing: -3.2px;
+  }
+
+  %font-h2 {
+    font-size: 4.2rem;
+    font-weight: 500;
+    line-height: 1.19; /* 119.048% */
+    letter-spacing: -1.68px;
+  }
+
+  %font-h4 {
+    font-size: 5.6rem;
+    line-height: 1.17; /* 117.857% */
+    letter-spacing: -2.24px;
+  }
+
+  %font-h3 {
+    font-size: 3.2rem;
+    line-height: 1.25; /* 125% */
+    letter-spacing: -1.28px;
+  }
+
+  // nav
+  .container-nav {
+    max-width: 1330px;
+  }
+
+  .nav {
+    position: relative;
+    padding-top: 40px;
+
+    &::after {
+      background-color: transparent;
+    }
+
+    &__icon-logo {
+      @include abstracts.image(82px);
+      object-fit: contain;
+
+      &--center {
+        @include abstracts.absolutionCenter();
+      }
+    }
+
+    &-info {
+      &__letter {
+        --circle: 46px;
+      }
+
+      &__letter-icon {
+        @include abstracts.image(24px, 16px);
+      }
+    }
+
+    &-menu {
+      --gutter: 21.5px;
+
+      @include abstracts.flexGap(null);
+      margin: auto calc(var(--gutter) * -1);
+    }
+
+    &__link {
+      padding: 8px var(--gutter);
+
+      &:hover {
+        color: abstracts.$primary-color;
+      }
+    }
+  }
+
+  // hero
+  .hero {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 44px;
+    .hero-row--pc {
+      flex-direction: unset;
+      @include abstracts.flexGap(116px);
+    }
+
+    .row &-images {
+      margin-top: 0;
+    }
+    &-img {
+      width: 514px;
+      height: 705px;
+    }
+
+    &-deco1 {
+    }
+
+    &-content {
+      align-items: start;
+      text-align: left;
+    }
+
+    &-heading.lv2 {
+      @extend %font-h1;
+      width: 440px;
+    }
+
+    &-desc {
+      width: 370px;
+    }
+
+    &-links {
+      margin-top: 50px;
+    }
+
+    &-btn {
+      --height: 62px;
+
+      min-width: 170px;
+      font-size: 1.8rem;
+    }
+
+    &-link {
+      font-size: 1.8rem;
+    }
+
+    &-subcribe {
+      margin-top: 109px;
+    }
+
+    &-subcribe__label.lv4 {
+      font-size: 1.6rem;
+      line-height: 1.87;
+    }
+
+    &-socials {
+    }
+
+    &-media__wrap {
+      width: 40px;
+      height: 40px;
+    }
+
+    &-media__icon {
+      width: 1.6rem;
+    }
+
+    &-deco {
+      position: absolute;
+      bottom: 0;
+      right: -168px;
+
+      &__pc-icon {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  // contact
+  .contact {
+    margin-top: 111px;
+
+    &-content {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+      width: 339px;
+    }
+
+    &-heading.lv3 {
+      position: relative;
+      @extend %font-h2;
+      width: 253px;
+      margin-left: 86px;
+
+      &::before {
+        left: -99px;
+        top: 22px;
+        transform: translateX(0);
+        width: 86px;
+      }
+    }
+
+    &-socials {
+      flex: 1;
+      margin-left: 65px;
+      .row {
+        margin-top: -52px;
+      }
+
+      &__label {
+        white-space: nowrap;
+      }
+    }
+  }
+  // khi chua dung den grid system thi nen css nhu binh thuong thoi nha
+
+  // speciality
+  .specialities {
+    margin-top: 132px;
+
+    &-header {
+      @include abstracts.flexGap(null);
+      flex-direction: column;
+    }
+
+    &-heading.lv5 {
+      @extend %font-h4;
+    }
+
+    &-desc.lv2 {
+      width: 534px;
+      font-size: 1.8rem;
+    }
+
+    &-list {
+      overflow: unset;
+    }
+
+    &-list &-list--row {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      &__heading.lv3 {
+        @extend %font-h3;
+      }
+
+      &__desc.lv2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  //projects
+  .projects {
+    margin-top: 140px;
+    .row > * {
+      --grid-gutter-x: 30px;
+
+      margin-top: 30px;
+    }
+
+    .row {
+      margin-top: -30px;
+    }
+
+    &-header {
+      text-align: left;
+      flex-direction: initial;
+      column-gap: 160px;
+    }
+
+    &-heading.lv5 {
+      width: 468px;
+      @extend %font-h4;
+    }
+
+    &-desc.lv2 {
+      font-size: 1.8rem;
+      width: 370px;
+    }
+
+    &-list {
+      margin-top: 70px;
+    }
+
+    &-row {
+    }
+
+    &-item {
+      padding: 24px 24px 24px 34px;
+      &__info {
+      }
+
+      &__heading.lv6 {
+        @extend %font-h3;
+      }
+
+      &__desc.lv4 {
+        margin: 10px 0 20px;
+        width: 220px;
+        font-size: 1.6rem;
+        line-height: 1.43;
+      }
+
+      &__link {
+        font-size: 1.8rem;
+      }
+
+      &__image {
+      }
+
+      &__img {
+        width: 246px;
+        height: 187px;
+      }
+    }
+
+    &-deco-pc {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &-button {
+      margin-top: 80px;
+    }
+
+    &-button__btn {
+      --height: 62px;
+
+      min-width: 176px;
+      font-size: 1.8rem;
+    }
+  }
+
+  // designer
+
+  .designer {
+    margin-top: 140px;
+
+    &-title {
+      @extend %font-h3;
+    }
+
+    &-heading.lv5 {
+      @extend %font-h4;
+    }
+
+    &-desc.lv2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 570px;
+      font-size: 1.8rem;
+    }
+
+    &-exp {
+      margin-top: 70px;
+      justify-content: center;
+      column-gap: 140px;
+    }
+
+    &-wrap:nth-of-type(1) {
+      order: 1;
+    }
+
+    &-wrap:nth-of-type(3) {
+      order: 2;
+    }
+
+    &-num {
+      font-size: 56px;
+      line-height: 1.35; /* 135.714% */
+      letter-spacing: 1.68px;
+    }
+
+    &-label.lv2 {
+      font-size: 1.8rem;
+    }
+
+    &-video {
+      margin-top: 70px;
+      height: 628px;
+    }
+
+    &-image::before {
+      width: 111px;
+      height: 111px;
+    }
+
+    &-btn {
+      --height: 62px;
+
+      min-width: 170px;
+      font-size: 1.8rem;
+    }
+  }
+
+  // feedback
+  .feedback {
+    margin-top: 80px;
+
+    &-heading.lv5 {
+      @extend %font-h4;
+    }
+    &-desc.lv2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 570px;
+      margin-bottom: 60px;
+      font-size: 1.8rem;
+    }
+
+    &-quotes__content.lv1 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 679px;
+      font-size: 2.4rem;
+      line-height: 1.67;
+    }
+    &-info {
+      &__name.lv6 {
+        font-size: 3rem;
+      }
+    }
+    &-deco {
+      @include abstracts.image(395px, 292px);
+    }
+  }
+
+  // questions
+  .questions {
+    margin-top: 95px;
+    &-heading.lv5 {
+      width: 575px;
+      @extend %font-h4;
+    }
+
+    &-list {
+      margin-top: 80px;
+    }
+
+    &-item {
+      &__heading.lv6 {
+        width: 535px;
+        @extend %font-h3;
+      }
+
+      &__icon {
+        --circle: 50px;
+      }
+
+      &__desc.lv2 {
+        width: 487px;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  // atmosphere
+  .atmosphere {
+    margin-top: 160px;
+    &-header {
+    }
+    &-heading.lv5 {
+      @extend %font-h4;
+    }
+    &-desc.lv2 {
+      @include abstracts.marginCenter(528px);
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+    &-title {
+      @extend %font-h4;
+    }
+    &-images {
+      height: 529px;
+    }
+    &-pic {
+      flex: 1;
+      width: 370px;
+    }
+  }
+
+  // book
+  .book {
+    margin-top: 140px;
+    padding: 68px 0;
+
+    &-inner {
+      margin-left: auto;
+      margin-right: auto;
+      width: 574px;
+    }
+
+    &-icon {
+      width: 99px;
+    }
+
+    &-heading.lv5 {
+      width: 100%;
+      @extend %font-h4;
+    }
+
+    &-desc.lv2 {
+      font-size: 1.8rem;
+    }
+
+    &-btn {
+      --height: 62px;
+
+      min-width: 170px;
+      font-size: 1.8rem;
+    }
+
+    &-deco {
+      display: none;
+    }
+
+    &-deco-pc {
+      position: absolute;
+      top: 0;
+      // bottom: 0;
+      // height: 100%;
+
+      &:nth-of-type(5) {
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+      }
+
+      &:nth-of-type(6) {
+        left: 0;
+        top: auto;
+        bottom: 0;
+      }
+
+      &:nth-of-type(7) {
+        right: 0;
+      }
+    }
+  }
+
+  // footer
+  .footer {
+    position: relative;
+    margin-top: 50px;
+    &-top {
+      @include abstracts.flexCenter();
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    &-icon__logo {
+      position: absolute;
+      top: -23px;
+      left: 50%;
+      transform: translateX(-50%);
+      order: 2;
+      width: 100px;
+      height: 100px;
+    }
+
+    &-nav {
+      order: 3;
+      margin-top: 0;
+
+      &__link {
+        padding: 8px 21.5px;
+      }
+    }
+
+    &-info {
+      order: 1;
+      margin-top: 0;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    &-copyright {
+      margin-left: 80px;
+    }
+
+    &-policy {
+      margin-right: 80px;
+
+      position: initial;
+      transform: translateX(0);
+      &__label {
+      }
+    }
+  }
+}
+// lam phan menu cho menu nua la ok nha

@@ -1,0 +1,32 @@
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexGap($column, $row: null) {
+  display: flex;
+  align-items: center;
+
+  column-gap: $column;
+  row-gap: $row;
+}
+
+@mixin image($w, $h: $w) {
+  width: $w;
+  height: $h;
+  object-fit: cover;
+}
+
+@mixin absolutionCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin marginCenter($width: null) {
+  margin-left: auto;
+  margin-right: auto;
+  width: $width;
+}
