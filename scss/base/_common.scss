@@ -2,7 +2,6 @@
 
 .section-heading {
   &.lv1 {
-    color: abstracts.$text-color;
     font-size: 8rem;
     font-weight: 500;
     line-height: 0.95; /* 95% */
@@ -10,29 +9,24 @@
   }
 
   &.lv2 {
-    color: abstracts.$text-color;
     font-size: 4.2rem;
     font-weight: 500;
     line-height: 1.19; /* 119.048% */
   }
 
   &.lv3 {
-    color: abstracts.$text-color;
-    font-size: 2.8rem;
-    font-weight: 500;
-    line-height: 1.21; /* 119.048% */
-    letter-spacing: -1.12px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.45; /* 119.048% */
   }
 
   &.lv4 {
-    color: abstracts.$text-color;
     font-size: 3.2rem;
     font-weight: 500;
     line-height: 1.25; /* 119.048% */
   }
 
   &.lv5 {
-    color: abstracts.$text-color;
     font-size: 3.6rem;
     font-weight: 500;
     line-height: 1.16; /* 119.048% */
@@ -40,10 +34,9 @@
   }
 
   &.lv6 {
-    color: abstracts.$text-color;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 1.41; /* 119.048% */
+    line-height: 1.5; /* 119.048% */
   }
 }
 
@@ -51,21 +44,18 @@
 
 .section-desc {
   &.lv1 {
-    color: abstracts.$text-desc-color;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.67; /* 162.5% */
   }
 
   &.lv2 {
-    color: abstracts.$text-desc-color;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.62; /* 162.5% */
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.46; /* 146.667% */
   }
 
   &.lv3 {
-    color: abstracts.$text-desc-color;
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.87;
@@ -73,9 +63,12 @@
   }
 
   &.lv4 {
-    color: abstracts.$text-desc-color;
     font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.42; /* 162.5% */
+    font-weight: 400;
+    line-height: 1.42; /* 142.857% */
   }
+}
+
+.icon {
+  filter: var(--icon-color);
 }
