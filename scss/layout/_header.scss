@@ -78,6 +78,8 @@
     @include abstracts.flexGap(null);
 
     @include abstracts.breakpoint(lg) {
+      height: calc(100% - 26px);
+      overflow-y: auto;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -96,6 +98,12 @@
         visibility: hidden;
         opacity: 0;
       }
+
+      &--active > .dropdown-list {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
     }
 
     &__link.lv2 {
@@ -113,6 +121,14 @@
 
     &__icon {
       margin-top: 3px;
+      @include abstracts.breakpoint(lg) {
+        rotate: -90deg;
+        transition: rotate 0.1s linear;
+      }
+    }
+
+    &--active &__icon {
+      rotate: 0deg;
     }
   }
 

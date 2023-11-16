@@ -16,6 +16,12 @@
   opacity: 0;
   transition: 0.2s linear;
   transition-property: visibility opacity;
+  @include abstracts.breakpoint(lg) {
+    position: initial;
+    padding-top: 0;
+    // visibility: initial;
+    display: none;
+  }
 }
 
 .dropdown-inner {
@@ -29,6 +35,15 @@
   background: var(--dropdown-bgd-color);
   box-shadow: 0px 40px 90px 20px var(--dropdown-boxshadow-color);
 
+  @include abstracts.breakpoint(lg) {
+    // height: calc(100% - 26px);
+    padding-left: 40px;
+    padding-top: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   &::before {
     content: url(../icons/arrow-dropdown.svg);
     position: absolute;
@@ -36,6 +51,10 @@
     left: var(--arrow-left-pos);
     transform: translateX(-50%);
     filter: var(--dropdown-arrow-color);
+
+    @include abstracts.breakpoint(lg) {
+      content: none;
+    }
   }
 }
 
@@ -50,6 +69,13 @@
     max-height: var(--max-height-inner);
     border-right: 1px solid var(--dropdown-border-color);
     overflow-y: auto;
+
+    @include abstracts.breakpoint(lg) {
+      width: 100%;
+      max-height: none;
+      height: auto;
+      border-right: none;
+    }
   }
 }
 
@@ -69,6 +95,10 @@
 
     @include abstracts.breakpoint(xl) {
       display: none;
+    }
+
+    @include abstracts.breakpoint(lg) {
+      display: block;
     }
   }
 
@@ -91,10 +121,17 @@
   }
 
   &__heading {
+    @include abstracts.breakpoint(lg) {
+      margin-bottom: 26px;
+    }
   }
 
   &__list {
     margin-top: 19px;
+
+    @include abstracts.breakpoint(lg) {
+      margin-top: 0;
+    }
   }
 
   &__item--active > .sub-menu {
@@ -127,6 +164,13 @@
 
   overflow-y: auto;
 
+  @include abstracts.breakpoint(lg) {
+    margin-top: 14px;
+    position: initial;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
   &--not-main {
     position: initial;
     inset: initial;
@@ -134,5 +178,10 @@
     grid-template-columns: repeat(4, 1fr);
     padding-left: 0;
     height: var(--max-height-inner);
+
+    @include abstracts.breakpoint(lg) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
   }
 }
