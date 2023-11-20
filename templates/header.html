@@ -1,6 +1,9 @@
 <div class="container">
   <div class="header-top">
-    <button class="header-top__menu d-none d-lg-block js-toggle" toggle-target="#navbar-menu">
+    <button
+      class="header-top__menu d-none d-lg-block js-toggle"
+      toggle-target="#navbar-menu"
+    >
       <img
         src="./assets/icons/menu-icon.svg"
         alt=""
@@ -21,7 +24,7 @@
     </a>
 
     <!-- navbar -->
-    <nav class="header-navbar show" id="navbar-menu">
+    <nav class="header-navbar hide" id="navbar-menu">
       <!-- close btn -->
       <button
         class="header-navbar__close-btn d-none d-lg-block js-toggle"
@@ -30,9 +33,31 @@
         <img
           src="./assets/icons/arrow-back.svg"
           alt="back btn"
-          class="header-navbar__close-icon"
+          class="header-navbar__close-icon icon"
         />
       </button>
+
+      <!--cart and heart  -->
+
+      <a href="#!" class="header-navbar__btn d-none d-md-flex">
+        <img
+          src="./assets/icons/cart.svg"
+          alt="card"
+          class="header-navbar__btn-icon icon"
+        />
+        <span class="section-desc lv2 header-navbar__btn-title">Card</span>
+        <span class="section-desc lv2 header-navbar__btn-qnt">3</span>
+      </a>
+
+      <a href="#!" class="header-navbar__btn d-none d-md-flex">
+        <img
+          src="./assets/icons/heart.svg"
+          alt="heart"
+          class="header-navbar__btn-icon icon"
+        />
+        <span class="section-desc lv2 header-navbar__btn-title">Favorite</span>
+        <span class="section-desc lv2 header-navbar__btn-qnt">3</span>
+      </a>
 
       <!-- dropdown -->
       <div class="header-list js-dropdown-list">
@@ -65,7 +90,9 @@
                       />
                     </div>
                     <div class="menu-column__content">
-                      <h2 class="section-heading lv6 menu-column__heading d-lg-none">
+                      <h2
+                        class="section-heading lv6 menu-column__heading d-lg-none"
+                      >
                         All Departments
                       </h2>
                       <ul class="menu-column__list js-menu-list">

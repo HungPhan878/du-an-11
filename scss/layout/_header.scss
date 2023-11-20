@@ -25,6 +25,7 @@
     }
   }
 
+  // header navbar
   &-navbar {
     margin-left: 129px;
 
@@ -37,16 +38,16 @@
       position: fixed;
       z-index: 10;
       inset: 0 50% 0 0;
-      background-color: #fff;
+      background-color: var(--navbar-bgd-color);
       margin-left: 0;
       padding: 20px 0;
       border-radius: 0px 20px 20px 0px;
-      box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
       transform: translateX(-100%);
       transition: transform 0.4s linear;
 
       &.show {
         transform: translateX(0);
+        box-shadow: 0px 40px 90px 20px var(--navbar-shadow-color);
       }
 
       &.show ~ &__overlay {
@@ -55,8 +56,16 @@
       }
     }
 
+    @include abstracts.breakpoint(sm) {
+      inset: 0 20% 0 0;
+    }
+
     &__close-btn {
       padding: 10px 40px;
+
+      @include abstracts.breakpoint(sm) {
+        padding: 10px 20px;
+      }
     }
 
     &__overlay {
@@ -72,8 +81,31 @@
         transition-property: visibility, opacity;
       }
     }
+
+    // cart and heart
+    &__btn {
+      align-items: center;
+      padding: 0 40px;
+      height: 50px;
+
+      @include abstracts.breakpoint(sm) {
+        padding: 0 20px;
+        height: 44px;
+      }
+      &-icon {
+      }
+
+      &-title {
+        margin-left: 16px;
+      }
+
+      &-qnt {
+        margin-left: auto;
+      }
+    }
   }
 
+  // list
   &-list {
     @include abstracts.flexGap(null);
 
@@ -82,6 +114,12 @@
       overflow-y: auto;
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    @include abstracts.breakpoint(md) {
+      height: calc(100% - 140px);
+      // de khong hien tải lại trên iphone
+      overscroll-behavior: contain;
     }
   }
 
@@ -116,6 +154,10 @@
         padding: 0 40px;
         font-size: 1.6rem;
         line-height: 1.5; /* 150% */
+      }
+
+      @include abstracts.breakpoint(sm) {
+        padding: 0 20px;
       }
     }
 

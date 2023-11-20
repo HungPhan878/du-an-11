@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,7 +44,33 @@
 
     <div class="container">
       <!-- main -->
-      <main></main>
+      <main>
+        <section class="slideshow">
+          <div class="slideshow-inner">
+            <div class="slideshow-item">
+              <picture>
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./assets/image/slideshow/item-1-md.png"
+                />
+                <img
+                  src="./assets/image/slideshow/item-1.png"
+                  alt="ORDER YOUR
+                FAVORITE COFFEE"
+                  class="slideshow-item__img"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <!-- slider -->
+          <div class="slideshow-slider">
+            <span class="slideshow-slider__qnt">1</span>
+            <span class="slideshow-slider__separate"></span>
+            <span class="slideshow-slider__qnt">5</span>
+          </div>
+        </section>
+      </main>
 
       <!-- footer -->
       <footer id="footer"></footer>
