@@ -20,8 +20,20 @@ html {
   --navbar-bgd-color: #fff;
   --navbar-shadow-color: rgba(200, 200, 200, 0.4);
 
+  // slider
+  --slider-text-color: #fff;
+
+  // category
+  --cate-img-bgd-color: #fff;
+  --cate-text-color: #000;
+  --cate-item-bgd:#eee;
+  
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
+  }
+
+  @include abstracts.breakpoint(md) {
+    --cate-item-bgd:#fff;
   }
 
   @include abstracts.breakpoint(sm) {

@@ -203,9 +203,9 @@ button {
   line-height: 1.45; /* 119.048% */
 }
 .section-heading.lv4 {
-  font-size: 3.2rem;
-  font-weight: 500;
-  line-height: 1.25; /* 119.048% */
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.41; /* 119.048% */
 }
 .section-heading.lv5 {
   font-size: 3.6rem;
@@ -220,9 +220,9 @@ button {
 }
 
 .section-desc.lv1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.67; /* 162.5% */
+  line-height: 1.5;
 }
 .section-desc.lv2 {
   font-size: 1.5rem;
@@ -345,10 +345,19 @@ html {
   --dropdown-border-color: #d2d1d6;
   --navbar-bgd-color: #fff;
   --navbar-shadow-color: rgba(200, 200, 200, 0.4);
+  --slider-text-color: #fff;
+  --cate-img-bgd-color: #fff;
+  --cate-text-color: #000;
+  --cate-item-bgd:#eee;
 }
 @media screen and (max-width: 991.98px) {
   html {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --cate-item-bgd:#fff;
   }
 }
 @media screen and (max-width: 575.98px) {
@@ -372,12 +381,15 @@ html.dark {
     saturate(5447%) hue-rotate(186deg) brightness(106%) contrast(80%);
   --dropdown-menu-icon-color: brightness(0) saturate(100%) invert(96%) sepia(1%)
     saturate(647%) hue-rotate(202deg) brightness(102%) contrast(97%);
-  --navbar-bgd-color: #292E39;
+  --navbar-bgd-color: #292e39;
+  --cate-img-bgd-color: #292e39;
+  --cate-text-color: #fff;
+  --cate-item-bgd: #171c28;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
     --header-boxshadow-color: rgba(0, 0, 0, 0.2);
-    --navbar-shadow-color: rgba(23, 28, 40, 0.40);
+    --navbar-shadow-color: rgba(23, 28, 40, 0.4);
   }
 }
 
@@ -567,12 +579,6 @@ html.dark {
 .slideshow {
   --slider-color: #fff;
   position: relative;
-  margin: 40px 0;
-}
-@media screen and (max-width: 767.98px) {
-  .slideshow {
-    margin: 30px 0;
-  }
 }
 .slideshow-inner {
   display: flex;
@@ -620,6 +626,7 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44; /* 144.444% */
+  color: var(--slider-text-color);
 }
 @media screen and (max-width: 767.98px) {
   .slideshow-slider__qnt {
@@ -659,6 +666,71 @@ html.dark {
   transform: translate(90%, -50%);
 }
 
+.cate-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 26px 20px 20px;
+  gap: 20px;
+  border-radius: 16px;
+  background: var(--cate-item-bgd);
+}
+@media screen and (max-width: 991.98px) {
+  .cate-item {
+    height: 100%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .cate-item {
+    flex-direction: row;
+  }
+}
+.cate-item__img {
+  width: 116px;
+  height: 116px;
+  object-fit: contain;
+  background-color: var(--cate-img-bgd-color);
+  border-radius: 8px;
+}
+@media screen and (max-width: 991.98px) {
+  .cate-item__img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .cate-item__img {
+    width: 99px;
+    height: 99px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .cate-item__img {
+    width: 88px;
+    height: 88px;
+  }
+}
+.cate-item__title.lv3 {
+  color: var(--cate-text-color);
+}
+@media screen and (max-width: 767.98px) {
+  .cate-item__title.lv3 {
+    font-size: 1.8rem;
+  }
+}
+.cate-item__desc.lv1 {
+  margin-top: 6px;
+}
+@media screen and (max-width: 767.98px) {
+  .cate-item__desc.lv1 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .cate-item__desc.lv1 {
+    width: 185px;
+  }
+}
+
 .header {
   background-color: var(--bgd-color);
 }
@@ -669,6 +741,7 @@ html.dark {
 }
 .header-top {
   position: relative;
+  z-index: 9;
   display: flex;
   align-items: center;
   padding: 30px 0;
@@ -879,6 +952,27 @@ html.dark {
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.home-container {
+  margin-top: 40px;
+}
+@media screen and (max-width: 767.98px) {
+  .home-container {
+    margin-top: 30px;
+  }
+}
+.home-cate__heading {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .home-cate__heading {
+    font-size: 2.2rem;
+  }
+}
+.home-cate {
+  --grid-gutter-x: 51px;
+  --grid-gutter-y: 20px;
 }
 
 .col, .row > *, .container-fluid, .container {

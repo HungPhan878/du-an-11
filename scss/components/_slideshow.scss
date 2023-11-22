@@ -4,11 +4,6 @@
   --slider-color: #fff;
 
   position: relative;
-  margin: 40px 0;
-
-  @include abstracts.breakpoint(md) {
-    margin: 30px 0;
-  }
 
   &-inner {
     display: flex;
@@ -57,6 +52,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.44; /* 144.444% */
+    color: var(--slider-text-color);
 
     @include abstracts.breakpoint(md) {
       font-size: 1, 4rem;
