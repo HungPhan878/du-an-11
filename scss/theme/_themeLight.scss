@@ -26,14 +26,25 @@ html {
   // category
   --cate-img-bgd-color: #fff;
   --cate-text-color: #000;
-  --cate-item-bgd:#eee;
-  
+  --cate-item-bgd: #eee;
+
+  // buttons
+  //1.filter btn
+  --filter-btn-text: #6c6c72;
+  --filter-btn-bg: #fff;
+  // 2.like btn
+  --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+  // product card
+  --product-card-shadow: rgba(237, 237, 246, 0.2);
+  --product-card-bg: #fff;
+
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
   }
 
   @include abstracts.breakpoint(md) {
-    --cate-item-bgd:#fff;
+    --cate-item-bgd: #fff;
   }
 
   @include abstracts.breakpoint(sm) {

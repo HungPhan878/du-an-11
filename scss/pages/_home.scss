@@ -18,7 +18,15 @@
   }
 
   &-cate {
+    // can than o day co the gay ra du khoang cach day nha.
     --grid-gutter-x: 51px;
     --grid-gutter-y: 20px;
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 }
