@@ -772,6 +772,16 @@ html.dark {
   border-radius: 50%;
   box-shadow: 0px 20px 60px var(--like-btn-shadow);
 }
+.like-btn:not(.like-btn--liked) .like-btn__icon-liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon-liked {
+  margin-top: 9px;
+}
+
 .product-card__info-rating, .product-card__info-price, .product-card__info-heading {
   font-size: 1.6rem;
   font-weight: 500;
@@ -1060,6 +1070,11 @@ html.dark {
 .home-cate {
   --grid-gutter-x: 51px;
   --grid-gutter-y: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .home-cate {
+    --grid-gutter-x: 0;
+  }
 }
 .home-row {
   display: flex;

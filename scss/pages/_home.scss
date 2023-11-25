@@ -21,6 +21,10 @@
     // can than o day co the gay ra du khoang cach day nha.
     --grid-gutter-x: 51px;
     --grid-gutter-y: 20px;
+
+    @include abstracts.breakpoint(md) {
+      --grid-gutter-x: 0;
+    }
   }
 
   &-row {
