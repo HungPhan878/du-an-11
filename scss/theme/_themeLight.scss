@@ -39,6 +39,9 @@ html {
   --product-card-shadow: rgba(237, 237, 246, 0.2);
   --product-card-bg: #fff;
 
+  // filter-form
+  --filter-form-bg: #fff;
+  --filter-form-shadow: rgba(200, 200, 200, 0.4);
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
   }
