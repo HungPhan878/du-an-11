@@ -41,3 +41,42 @@
     margin-top: 9px;
   }
 }
+
+//btns
+.btn {
+  height: 38px;
+  padding: 0 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  background-color: #f8f8fb;
+  border-radius: 6px;
+
+  + .btn {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &--text {
+    padding: 0;
+    background-color: transparent;
+    color: #9e9da8;
+    font-weight: 400;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid #d2d1d6;
+  }
+
+  &--primary {
+    background-color: #ffb700;
+  }
+
+  &--rounded {
+    border-radius: 99px;
+  }
+}
