@@ -61,6 +61,10 @@
     @include abstracts.breakpoint(xl) {
       margin-left: 0;
     }
+
+    @include abstracts.breakpoint(sm) {
+      height: 42px;
+    }
   }
 
   &:hover {
