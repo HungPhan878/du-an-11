@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .filter {
   &-wrapper {
     position: relative;
@@ -15,6 +17,25 @@
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
 
     border-radius: 20px;
+    transition: 0.2s linear;
+    transition-property: opacity, visibility;
+
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include abstracts.breakpoint(lg) {
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-bottom: 0;
+      // for mobile khi scroll hong bi thoat ra.
+      overscroll-behavior: contain;
+    }
+
+    @include abstracts.breakpoint(sm) {
+      width: 85vw;
+    }
   }
 
   &-heading.lv3 {
@@ -25,12 +46,22 @@
     margin-top: 30px;
     &__row {
       display: flex;
+
+      @include abstracts.breakpoint(xl) {
+        flex-direction: column;
+      }
     }
 
     &__separate {
       margin: 0 30px;
       width: 1px;
       background-color: #eee;
+
+      @include abstracts.breakpoint(xl) {
+        margin: 30px 0;
+        height: 1px;
+        width: 100%;
+      }
     }
 
     &__label.lv3 {
@@ -97,6 +128,10 @@
       & + & {
         border-left: 1px solid #d2d1d6;
       }
+
+      @include abstracts.breakpoint(xl) {
+        flex: 1;
+      }
     }
 
     &__group {
@@ -116,12 +151,21 @@
 
       border-radius: 6px;
       border: 1px solid #d2d1d6;
+
+      @include abstracts.breakpoint(sm) {
+        width: 100%;
+      }
     }
 
     &__btns {
       display: flex;
       flex-wrap: wrap;
       column-gap: 30px;
+
+      @include abstracts.breakpoint(lg) {
+        flex-wrap: nowrap;
+        column-gap: 9px;
+      }
     }
 
     &__btn {
@@ -151,6 +195,10 @@
       border: 1px solid #d2d1d6;
 
       overflow: hidden;
+
+      @include abstracts.breakpoint(lg) {
+        width: 100%;
+      }
     }
 
     &__input {
@@ -171,6 +219,13 @@
     &--btns {
       margin-top: 18px;
       justify-content: end;
+
+      @include abstracts.breakpoint(lg) {
+        padding-bottom: 30px;
+        position: sticky;
+        bottom: 0;
+        background: var(--filter-form-bg);
+      }
     }
   }
   &__arrow-icon {
@@ -179,5 +234,6 @@
     top: -18px;
     width: 45px;
     height: 19px;
+    filter: var(--filter-form-arrow-icon);
   }
 }

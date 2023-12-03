@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -150,7 +150,7 @@
           <div class="home-row">
             <h2 class="section-heading lv4 home-heading">Total LavAzza 1320</h2>
             <div class="filter-wrapper">
-              <button class="filter-btn">
+              <button class="filter-btn js-toggle" toggle-target="#filter-form">
                 Filter
                 <img
                   src="./assets/icons/filter.svg"
@@ -159,8 +159,8 @@
                 />
               </button>
 
-              <!-- form -->
-              <div class="filter-inner">
+              <!-- filter form -->
+              <div class="filter-inner hide" id="filter-form">
                 <img
                   src="./assets/icons/filter-arrow.png"
                   alt=""
@@ -235,7 +235,7 @@
                             <img
                               src="./assets/icons/select.svg"
                               alt=""
-                              class="filter-form__select-icon"
+                              class="filter-form__select-icon icon"
                             />
                           </div>
                           <div class="section-desc lv4 filter-form__select">
@@ -243,7 +243,7 @@
                             <img
                               src="./assets/icons/select.svg"
                               alt=""
-                              class="filter-form__select-icon"
+                              class="filter-form__select-icon icon"
                             />
                           </div>
                         </div>
@@ -285,7 +285,7 @@
                         <img
                           src="./assets/icons/search.svg"
                           alt=""
-                          class="filter-form__icon"
+                          class="filter-form__icon icon"
                         />
                       </div>
 
@@ -306,8 +306,8 @@
                   </div>
 
                   <div class="filter-form__row filter-form--btns">
-                    <button class="btn btn--text">Cancel</button>
-                    <button class="btn btn--primary">Show Result</button>
+                    <button class="btn btn--text js-toggle" toggle-target="#filter-form">Cancel</button>
+                    <button class="btn btn--primary js-toggle" toggle-target="#filter-form">Show Result</button>
                   </div>
                 </form>
               </div>

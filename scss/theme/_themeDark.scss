@@ -35,9 +35,16 @@ html.dark {
   // buttons
   //1.filter btn
   --filter-btn-text: #fff;
-  --filter-btn-bg: #171C28;
+  --filter-btn-bg: #171c28;
 
   // product card
-  --product-card-shadow: rgba(0, 0, 0, 0.20);
-  --product-card-bg: #171C28;
+  --product-card-shadow: rgba(0, 0, 0, 0.2);
+  --product-card-bg: #171c28;
+
+  // filter-form
+  --filter-form-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-form-btn-bg: #171c28;
+  --filter-form-arrow-icon: brightness(0) saturate(100%) invert(15%) sepia(31%)
+    saturate(374%) hue-rotate(182deg) brightness(97%) contrast(92%);
 }
