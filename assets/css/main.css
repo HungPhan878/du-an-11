@@ -181,6 +181,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 input,
 button {
   outline: none;
@@ -366,10 +370,13 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-btn-bg: #f8f8fb;
+  --footer-bg-color: #eee;
+  --footer-text-color: rgb(26, 22, 46);
 }
 @media screen and (max-width: 991.98px) {
   html {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
+    --footer-bg-color: #fff;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -411,6 +418,8 @@ html.dark {
   --filter-form-btn-bg: #171c28;
   --filter-form-arrow-icon: brightness(0) saturate(100%) invert(15%) sepia(31%)
     saturate(374%) hue-rotate(182deg) brightness(97%) contrast(92%);
+  --footer-bg-color: #171c28;
+  --footer-text-color: #9e9da6;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1326,6 +1335,188 @@ html.dark {
   cursor: pointer;
 }
 
+#footer {
+  padding: 50px 0;
+  font-size: 1.4rem;
+  background: var(--footer-bg-color);
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr repeat(2, 1fr) 1.5fr;
+  gap: 60px;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__desc {
+  margin-top: 30px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__desc {
+    width: min(400px, 100%);
+  }
+}
+.footer__form {
+  margin-top: 40px;
+}
+.footer__form-label {
+  line-height: 1.4;
+  cursor: text;
+}
+.footer__form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0;
+}
+@media screen and (max-width: 1199.98px) {
+  .footer__form-wrapper {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footer__form-wrapper {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footer-logo--size {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footer-logo--heading.lv3 {
+    font-size: 2.2rem;
+  }
+}
+.footer__form-input {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 6px;
+  border: 2px solid #d2d1d6;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: text;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__form-input {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .footer__form-input {
+    width: 100%;
+  }
+}
+.footer__form-btn {
+  height: 46px;
+  padding: 0 19px;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .footer__form-btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footer__form-btn {
+    width: initial;
+  }
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.footer__list {
+  margin-top: 18px;
+}
+.footer__label {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.footer__link {
+  display: inline-block;
+}
+.footer__link:hover {
+  color: #0071dc;
+}
+.footer__text, .footer__link {
+  padding: 8px 0;
+  line-height: 1.4;
+}
+.footer__text {
+  color: var(--footer-text-color);
+}
+.footer__bottom {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__bottom {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+  }
+}
+.footer__copyright {
+  color: var(--footer-text-color);
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  filter: grayscale(50%);
+  transition: transform, filter;
+  transition-duration: 0.3s;
+}
+@media screen and (max-width: 575.98px) {
+  .footer__social-link {
+    width: 42px;
+    height: 42px;
+  }
+}
+.footer__social-link:hover {
+  transform: translateY(-3px);
+  filter: grayscale(0);
+}
+.footer__social-link--facebook {
+  background-color: #4863a9;
+}
+.footer__social-link--youtube {
+  background-color: #f00;
+}
+.footer__social-link--tiktok {
+  background-color: #000;
+}
+.footer__social-link--twitter {
+  background-color: #4999e6;
+}
+.footer__social-link--linked {
+  background-color: #2f71ab;
+}
+.footer__social-icon {
+  width: 14px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+}
+
+.home {
+  margin-bottom: 50px;
+}
 .home-container {
   margin-top: 40px;
 }
