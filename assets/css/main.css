@@ -802,6 +802,8 @@ html.dark {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   height: 38px;
   padding: 0 10px;
   font-size: 1.5rem;
@@ -999,6 +1001,11 @@ html.dark {
     flex: 1;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .filter-form__select {
+    font-size: 1.6rem;
+  }
+}
 .filter-form__group {
   display: flex;
   column-gap: 30px;
@@ -1059,6 +1066,11 @@ html.dark {
 @media screen and (max-width: 991.98px) {
   .filter-form__text-input {
     width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .filter-form__text-input {
+    font-size: 1.6rem;
   }
 }
 .filter-form__input {
@@ -1406,6 +1418,11 @@ html.dark {
 @media screen and (max-width: 991.98px) {
   .footer__form-input {
     width: 40%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .footer__form-input {
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 575.98px) {

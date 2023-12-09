@@ -130,6 +130,10 @@
       @include abstracts.breakpoint(xl) {
         flex: 1;
       }
+
+      @include abstracts.breakpoint(md) {
+        font-size: 1.6rem;
+      }
     }
 
     &__group {
@@ -201,6 +205,9 @@
 
       @include abstracts.breakpoint(lg) {
         width: 100%;
+      }
+      @include abstracts.breakpoint(md) {
+        font-size: 1.6rem;
       }
     }
 

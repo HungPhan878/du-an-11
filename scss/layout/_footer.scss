@@ -76,6 +76,12 @@
       width: 40%;
     }
 
+
+    @include abstracts.breakpoint(md) {
+      font-size: 1.6rem;
+
+    }
+
     @include abstracts.breakpoint(sm) {
       width: 100%;
     }
