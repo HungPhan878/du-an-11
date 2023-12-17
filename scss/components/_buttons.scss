@@ -49,6 +49,8 @@
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
 
   height: 38px;
   padding: 0 10px;
@@ -59,7 +61,9 @@
   border-radius: 6px;
 
   + .btn {
-    margin-left: 20px;
+    &:not(.btn-no-margin) {
+      margin-left: 20px;
+    }
 
     @include abstracts.breakpoint(xl) {
       margin-left: 0;
