@@ -28,11 +28,16 @@
     background-color: var(--auth-bgd-intro);
   }
 
+  &__only-img {
+    display: flex;
+    justify-content: center;
+  }
+
   &__img {
-    width: var(--width);
-    @include abstracts.breakpoint(lg) {
-      max-width: 100%;
-    }
+    width: min(424px, 100%);
+    // @include abstracts.breakpoint(lg) {
+    //   max-width: 100%;
+    // }
   }
 
   &__logo,
@@ -128,7 +133,7 @@
       margin-top: 0;
     }
 
-    &-forgot{
+    &-forgot {
       margin-top: 10px;
     }
   }

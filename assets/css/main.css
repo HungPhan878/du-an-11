@@ -1535,13 +1535,12 @@ html.dark {
   justify-content: center;
   background-color: var(--auth-bgd-intro);
 }
-.auth__img {
-  width: var(--width);
+.auth__only-img {
+  display: flex;
+  justify-content: center;
 }
-@media screen and (max-width: 991.98px) {
-  .auth__img {
-    max-width: 100%;
-  }
+.auth__img {
+  width: min(424px, 100%);
 }
 .auth__logo, .auth__change-btn {
   position: absolute;
