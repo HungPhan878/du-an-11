@@ -42,7 +42,6 @@ html {
   // filter-form
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
-  --filter-form-btn-bg: #f8f8fb;
 
   // footer
   --footer-bg-color: #eee;
@@ -52,7 +51,16 @@ html {
   --auth-bg: #fff;
 
   // form
-  --form-placeholder-color:#D2D1D6;
+  --form-placeholder-color: #d2d1d6;
+  --form-btn-bg: #f8f8fb;
+  // product page
+  --product-page-bg: #fff;
+  --product-info-bg: #f6f6f6;
+  --product-form-btn: #ededf6;
+
+  // --breadcrumbs
+  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
@@ -62,6 +70,15 @@ html {
   @include abstracts.breakpoint(md) {
     --cate-item-bgd: #fff;
     --auth-bgd-intro: #fff;
+
+    // product
+    --product-page-bg: #fafafd;
+    --product-intro-bg: #fff;
+    --product-intro-shadow: rgba(237, 237, 246, 0.2);
+    --product-info-bg: #fff;
+
+    // breadcrumbs
+    --breadcrumbs-bg: #ffffff;
   }
 
   @include abstracts.breakpoint(sm) {

@@ -63,8 +63,6 @@
     }
 
     &__label.lv3 {
-      display: block;
-      font-weight: 500;
     }
 
     &__slider {
@@ -100,42 +98,6 @@
       }
     }
 
-    // select
-
-    &__inner {
-      margin-top: 20px;
-    }
-
-    &__select-wrapper {
-      display: flex;
-      height: 45px;
-      margin-bottom: 20px;
-
-      border-radius: 6px;
-      border: 1px solid #d2d1d6;
-    }
-
-    &__select {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 0 14px;
-      width: var(--width-select, 108px);
-
-      & + & {
-        border-left: 1px solid #d2d1d6;
-      }
-
-      @include abstracts.breakpoint(xl) {
-        flex: 1;
-      }
-
-      @include abstracts.breakpoint(md) {
-        font-size: 1.6rem;
-      }
-    }
-
     &__group {
       display: flex;
       column-gap: 30px;
@@ -165,31 +127,6 @@
 
       @include abstracts.breakpoint(md) {
         font-size: 1.6rem;
-      }
-    }
-
-    &__btns {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 30px;
-
-      @include abstracts.breakpoint(lg) {
-        flex-wrap: nowrap;
-        column-gap: 9px;
-      }
-    }
-
-    &__btn {
-      height: 32px;
-      padding: 0 12px;
-
-      color: #9e9da8;
-      border-radius: 6px;
-      background-color: var(--filter-form-btn-bg);
-      transition: color linear 0.3s;
-
-      &:hover {
-        color: var(--text-color);
       }
     }
 
