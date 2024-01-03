@@ -11,6 +11,10 @@
 
   &-container {
     margin-top: 30px;
+
+    @include abstracts.breakpoint(md) {
+      margin-top: 20px;
+    }
   }
 
   &-intro--bg {
@@ -79,11 +83,11 @@
       opacity: 0.9;
       transition: opacity, border-color;
       transition-duration: 0.3s;
-      cursor: pointer;
 
-      &:hover {
+      &:not(&--current):hover {
         opacity: 1;
         border-color: rgba(158, 157, 168);
+        cursor: pointer;
       }
 
       &--current {
@@ -96,6 +100,7 @@
   &-info {
     padding: 60px;
     background-color: var(--product-info-bg);
+    border-radius: 10px;
 
     @include abstracts.breakpoint(xxl) {
       padding: 40px;
@@ -133,9 +138,6 @@
     margin-top: 30px;
     display: flex;
     gap: 16px;
-    @include abstracts.breakpoint(md) {
-      margin-top: 16px;
-    }
   }
 
   &-prop__icon {
@@ -193,7 +195,6 @@
   }
 
   &-info__card-price {
-    color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.5; /* 150% */
@@ -215,11 +216,11 @@
       ),
       #67b044
     );
+    border-radius: 4px;
   }
 
   &-info__card-total-price {
     margin: 20px 0;
-    color: var(--text-color);
     font-size: 2.6rem;
     font-weight: 500;
     line-height: 1.38; /* 138.462% */
@@ -238,5 +239,67 @@
     border-radius: 6px;
     border: 1px solid #d2d1d6;
     box-shadow: none;
+  }
+
+  // product contents
+  &-tab {
+  }
+
+  &-tab__list {
+    display: flex;
+    align-items: center;
+    margin: 0 -30px;
+    overflow-y: auto;
+
+    @include abstracts.breakpoint(md) {
+      margin: 0 -15px;
+    }
+  }
+
+  &-tab__item {
+    padding: 0 30px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.45; /* 145.455% */
+    color: #9e9da8;
+    white-space: nowrap;
+
+    &:not(&--active) {
+      cursor: pointer;
+    }
+
+    @include abstracts.breakpoint(md) {
+      font-size: 1.8rem;
+      padding: 8px 15px;
+    }
+
+    &--active {
+      color: inherit;
+    }
+  }
+
+  &-tab__contents {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-tab__content {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &-tab__heading {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.41; /* 141.667% */
+  }
+
+  &-tab__text-content {
+    margin-top: -20px;
   }
 }

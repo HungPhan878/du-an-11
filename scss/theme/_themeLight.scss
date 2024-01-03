@@ -62,6 +62,25 @@ html {
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 
+  // search bar
+  --search-bar-bg: #fff;
+
+  // review
+  --review-card-bg: #fafafd;
+
+  // text content
+  --text-content-a: #ffb700;
+  --text-content-blockquote: #ffb700;
+  --text-content-blockquote-bg: rgb(255, 183, 0, 0.1);
+
+  // act dropdown of header
+  --act-dropdown-bg: #fff;
+  --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --act-dropdown-separate: #D2D1D6;
+
+  // cart review of header
+  --cart-review-img-border:#d2d1d6;
+
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
     --footer-bg-color: #fff;
@@ -79,6 +98,9 @@ html {
 
     // breadcrumbs
     --breadcrumbs-bg: #ffffff;
+
+    // review card
+    --review-card-bg: #fff;
   }
 
   @include abstracts.breakpoint(sm) {

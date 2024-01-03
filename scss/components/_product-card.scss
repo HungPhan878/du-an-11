@@ -5,8 +5,10 @@
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   padding: 16px;
-  // height: 100%;
+  height: 100%;
   background: var(--product-card-bg);
   border-radius: 20px;
   box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
@@ -33,6 +35,9 @@
 
   &__info {
     margin-top: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     &-heading {
       @extend %font-1;
     }
@@ -48,6 +53,7 @@
     &-row {
       display: flex;
       align-items: center;
+      margin-top: auto;
     }
 
     &-price {
@@ -55,7 +61,7 @@
     }
 
     &-star {
-        margin: 0 6px 0 auto;
+      margin: 0 6px 0 auto;
     }
 
     &-rating {
