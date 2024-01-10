@@ -76,10 +76,22 @@ html {
   // act dropdown of header
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
-  --act-dropdown-separate: #D2D1D6;
+  --act-dropdown-separate: #d2d1d6;
 
   // cart review of header
-  --cart-review-img-border:#d2d1d6;
+  --cart-review-img-border: #d2d1d6;
+
+  // checkout
+  --checkout-breadcrumbs--bg: #fff;
+
+  // cart of checkout
+  --cart-info-bg: #fff;
+  --cart-info-shadow: rgba(237, 237, 246, 0.2);
+  --cart-item-input-border: #d2d1d6;
+  --cart-item-separate-bottom: #d2d1d6;
+  --cart-info-separate: #d2d1d6;
+  --cart-gift-bg: rgb(118, 68, 225, 0.1);
+  --cart-gift-shadow: rgba(237, 237, 246, 0.2);
 
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
