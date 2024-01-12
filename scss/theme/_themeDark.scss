@@ -96,6 +96,10 @@ html.dark {
   --cart-gift-bg: #292e39;
   --cart-gift-shadow: rgba(23, 28, 40, 0.2);
 
+  // dialog
+  --dialog-bg: #2f3441;
+  --dialog-shadow: rgba(23, 28, 40, 0.2);
+
   @include abstracts.breakpoint(lg) {
     // header
     --header-boxshadow-color: rgba(0, 0, 0, 0.2);

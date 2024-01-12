@@ -410,6 +410,8 @@ html {
   --cart-info-separate: #d2d1d6;
   --cart-gift-bg: rgb(118, 68, 225, 0.1);
   --cart-gift-shadow: rgba(237, 237, 246, 0.2);
+  --dialog-bg: #fff;
+  --dialog-shadow: rgba(237, 237, 246, 0.2);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -491,6 +493,8 @@ html.dark {
   --cart-info-separate: #292e39;
   --cart-gift-bg: #292e39;
   --cart-gift-shadow: rgba(23, 28, 40, 0.2);
+  --dialog-bg: #2f3441;
+  --dialog-shadow: rgba(23, 28, 40, 0.2);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -507,6 +511,61 @@ html.dark {
     --breadcrumbs-bg: #171c28;
     --search-bar-bg: #171c28;
   }
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: visibility, opacity;
+  transition-duration: 0.2s;
+}
+.dialog.show {
+  visibility: visible;
+  opacity: 1;
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  max-width: min(450px, 100% - 40px);
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--dialog-bg);
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .dialog__bottom {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .dialog__btn {
+    flex: 1;
+    height: 42px !important;
+  }
+}
+.dialog__overlay {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header-inner {
@@ -891,6 +950,7 @@ html.dark {
   padding: 0 10px;
   font-size: 1.5rem;
   font-weight: 500;
+  white-space: nowrap;
   background-color: #f8f8fb;
   border-radius: 6px;
 }

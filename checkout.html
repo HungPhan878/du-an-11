@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -155,7 +155,10 @@
                             Save
                           </button>
 
-                          <button class="cart-item__ctrl-btn">
+                          <button
+                            class="cart-item__ctrl-btn js-toggle"
+                            toggle-target="#delete-item"
+                          >
                             <img src="./assets/icons/detele.svg" alt="" />
                             Delete
                           </button>
@@ -219,7 +222,10 @@
                             Save
                           </button>
 
-                          <button class="cart-item__ctrl-btn">
+                          <button
+                            class="cart-item__ctrl-btn js-toggle"
+                            toggle-target="#delete-item"
+                          >
                             <img src="./assets/icons/detele.svg" alt="" />
                             Delete
                           </button>
@@ -283,7 +289,10 @@
                             Save
                           </button>
 
-                          <button class="cart-item__ctrl-btn">
+                          <button
+                            class="cart-item__ctrl-btn js-toggle"
+                            toggle-target="#delete-item"
+                          >
                             <img src="./assets/icons/detele.svg" alt="" />
                             Delete
                           </button>
@@ -394,5 +403,27 @@
     <script>
       load("#footer", "./templates/footer.html");
     </script>
+
+    <!-- Dialog and modal -->
+    <div id="delete-item" class="dialog hide">
+      <div class="dialog__content">
+        <div class="dialog__text">Do you want to delete this product ?</div>
+        <div class="dialog__bottom">
+          <button
+            class="btn btn--outline dialog__btn js-toggle"
+            toggle-target="#delete-item"
+          >
+            Cancel
+          </button>
+          <button
+            class="btn btn--primary btn-no-margin dialog__btn js-toggle"
+            toggle-target="#delete-item"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+      <div class="dialog__overlay js-toggle" toggle-target="#delete-item"></div>
+    </div>
   </body>
 </html>
