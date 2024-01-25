@@ -7,6 +7,12 @@
   line-height: 1.44;
 }
 
+%font-2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.46;
+}
+
 .checkout {
   &-page {
     display: flex;
@@ -28,6 +34,7 @@
   }
 }
 
+// cart info
 .cart-info {
   padding: 30px;
   border-radius: 20px;
@@ -48,6 +55,17 @@
 
   & + & {
     margin-top: 30px;
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41; /* 141.667% */
+  }
+
+  &__sub-title {
+    margin-bottom: 30px;
+    @extend %font-1;
   }
 
   &__bottom {
@@ -122,6 +140,7 @@
   }
 }
 
+// cart item
 .cart-item {
   display: flex;
   gap: 30px;
@@ -296,5 +315,151 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.42; /* 142.857% */
+  }
+}
+
+// user address
+.user-address {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    @extend %font-1;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.5;
+    font-weight: 400;
+    line-height: 1.46; /* 146.667% */
+  }
+
+  &__add-btn {
+    padding: 10px 20px;
+    height: 46px;
+    @extend %font-1;
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__message {
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+  }
+
+  &__link {
+    color: #0071dc;
+  }
+}
+
+// address item
+.address-card {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    & + & {
+      margin-top: 30px;
+    }
+
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .address-card__icon-checkbox::before {
+      display: block;
+    }
+
+    &:checked + .address-card__icon-checkbox {
+      border-color: transparent;
+    }
+  }
+
+  &__icon-checkbox {
+    position: relative;
+    display: block;
+    width: 18.5px;
+    height: 18.5px;
+    border: 1px solid var(--address-card-checkbox-border);
+    border-radius: 4px;
+
+    &::before {
+      content: url(../icons/checked.svg);
+      position: absolute;
+      top: -1.7px;
+      left: -1.7px;
+      width: 18.5px;
+      height: 18.5px;
+      display: none;
+    }
+  }
+
+  &__title {
+    @extend %font-1;
+    line-height: 1;
+  }
+
+  &__desc {
+    width: min(520px, 90%);
+    margin-top: 6px;
+    @extend %font-2;
+  }
+
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  &__list-item {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.42; /* 142.857% */
+    list-style: disc inside;
+  }
+
+  &__right {
+    align-self: flex-end;
+
+    @include abstracts.breakpoint(md) {
+      align-self: start;
+    }
+  }
+
+  &__ctrl-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @extend %font-1;
+    font-weight: 400;
   }
 }

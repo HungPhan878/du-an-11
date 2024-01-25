@@ -64,6 +64,9 @@ html.dark {
   // form
   --form-placeholder-color: #b9babe;
   --form-btn-bg: #171c28;
+  --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+  --form-select-dialog-bg: #2f3441;
+  --form-option-hover-bg: #292e39;
 
   // product page
   --product-page-bg: #292e39;
@@ -99,6 +102,9 @@ html.dark {
   // dialog
   --dialog-bg: #2f3441;
   --dialog-shadow: rgba(23, 28, 40, 0.2);
+
+  // address card of page shipping
+  --address-card-checkbox-border: #fff;
 
   @include abstracts.breakpoint(lg) {
     // header
