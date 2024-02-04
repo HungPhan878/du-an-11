@@ -88,7 +88,7 @@ html.dark {
   // review
   --review-card-bg: #171c28;
 
-  // checkout
+  // checkoutfor
   --checkout-breadcrumbs--bg: #171c28;
 
   // cart of checkout
@@ -105,6 +105,9 @@ html.dark {
 
   // address card of page shipping
   --address-card-checkbox-border: #fff;
+
+  // payment page
+  --payment-bg: #292e39;
 
   @include abstracts.breakpoint(lg) {
     // header

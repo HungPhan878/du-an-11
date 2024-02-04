@@ -74,6 +74,10 @@ $error-color: #f44336;
     &--small {
       height: 42px;
     }
+
+    &--medium {
+      height: 46px;
+    }
   }
 
   // select dialog
@@ -124,10 +128,15 @@ $error-color: #f44336;
   &__select-btn-close {
     position: absolute;
     top: 0;
-    right: 0;
-    padding: 8px 18px;
+    left: 0;
+    padding: 9px 18px;
     font-size: 3rem;
     opacity: 0.8;
+    border: 1px solid rgb(204 204 204 / 40%);
+    border-bottom-right-radius: 8px;
+    &:active {
+      opacity: 1;
+    }
   }
 
   &__search {
@@ -170,6 +179,10 @@ $error-color: #f44336;
     margin-top: 10px;
     overflow-y: auto;
     overscroll-behavior: contain;
+
+    @supports (-webkit-touch-callout: none) {
+      padding-bottom: 300px;
+    }
   }
 
   &__option {
@@ -312,6 +325,13 @@ $error-color: #f44336;
       margin-bottom: 10px;
       font-size: 1.4rem;
       line-height: 142.857%;
+    }
+
+    &.form__label-title--medium {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
     }
   }
 

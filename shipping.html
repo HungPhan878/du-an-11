@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -171,7 +171,7 @@
                       <div class="address-card__right">
                         <div class="address-card__ctrl">
                           <button
-                            class="address-card__ctrl-btn js-toggle"
+                            class="cart-info__ctrl-btn js-toggle"
                             toggle-target="#add-new-address"
                           >
                             <img
@@ -218,7 +218,7 @@
                       <div class="address-card__right">
                         <div class="address-card__ctrl">
                           <button
-                            class="address-card__ctrl-btn js-toggle"
+                            class="cart-info__ctrl-btn js-toggle"
                             toggle-target="#add-new-address"
                           >
                             <img
@@ -504,7 +504,7 @@
 
                 <!-- btn -->
                 <a
-                  href="#!"
+                  href="./payment.html"
                   class="btn btn--primary btn--rounded cart-info__next-btn"
                   >Continue to checkout</a
                 >
@@ -556,10 +556,10 @@
             Cancel
           </button>
           <button
-            class="btn btn--primary btn-no-margin dialog__btn js-toggle"
+            class="btn btn--primary btn--danger btn-no-margin dialog__btn js-toggle"
             toggle-target="#delete-item"
           >
-            Confirm
+            Delete
           </button>
         </div>
       </div>
@@ -567,7 +567,7 @@
     </div>
 
     <!-- Dialog and modal: add a new address -->
-    <div id="add-new-address" class="dialog show">
+    <div id="add-new-address" class="dialog hide">
       <div class="dialog__content">
         <h2 class="dialog__heading">Add new Shipping address</h2>
         <!-- close -->
@@ -671,6 +671,7 @@
                   class="form__input js-toggle"
                   toggle-target="#select-dialog"
                   placeholder="City/Hometown/District"
+                  readonly
                 />
                 <img
                   src="./assets/icons/warning.svg"
@@ -680,12 +681,14 @@
 
                 <!-- select dialog -->
                 <div id="select-dialog" class="form__select-dialog hide">
-                  <h2 class="form__select-heading">City/Hometown/District</h2>
+                  <h2 class="form__select-heading d-none d-sm-block">
+                    Country
+                  </h2>
                   <button
-                    class="form__select-btn-close js-toggle"
+                    class="form__select-btn-close d-none d-sm-block js-toggle"
                     toggle-target="#select-dialog"
                   >
-                    &times;
+                    <img src="./assets/icons/arrow-back.svg" alt="" />
                   </button>
 
                   <div class="form__search">
@@ -749,10 +752,7 @@
             >
               Cancel
             </button>
-            <button
-              class="btn btn--primary btn-no-margin dialog__btn js-toggle"
-              toggle-target="#add-new-address"
-            >
+            <button class="btn btn--primary btn-no-margin dialog__btn">
               Create
             </button>
           </div>

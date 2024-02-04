@@ -104,6 +104,9 @@ html {
   // address card of page shipping
   --address-card-checkbox-border: #1a162e;
 
+  // payment page
+  --payment-bg: #f6f6f6;
+
   @include abstracts.breakpoint(lg) {
     --header-boxshadow-color: rgba(237, 237, 246, 0.2);
     --footer-bg-color: #fff;

@@ -404,9 +404,10 @@
       load("#footer", "./templates/footer.html");
     </script>
 
-    <!-- Dialog and modal -->
+    <!-- Dialog and modal: remove a cart item -->
     <div id="delete-item" class="dialog hide">
-      <div class="dialog__content">
+      <div class="dialog__content dialog--small">
+        <!-- close -->
         <div class="dialog__text">Do you want to delete this product ?</div>
         <div class="dialog__bottom">
           <button
@@ -416,10 +417,10 @@
             Cancel
           </button>
           <button
-            class="btn btn--primary btn-no-margin dialog__btn js-toggle"
+            class="btn btn--primary btn--danger btn-no-margin dialog__btn js-toggle"
             toggle-target="#delete-item"
           >
-            Confirm
+            Delete
           </button>
         </div>
       </div>

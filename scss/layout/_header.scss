@@ -93,7 +93,6 @@
         padding: 0 20px;
         height: 44px;
       }
-      
 
       &-title {
         margin-left: 16px;
@@ -264,12 +263,14 @@
     right: 108px;
     filter: var(--filter-form-arrow-icon);
 
-    &--favorite{
+    &--favorite {
       right: 92px;
     }
   }
 
   &__header {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -58,7 +58,7 @@
     }
 
     @include abstracts.breakpoint(sm) {
-      width: 185px;
+      width: 100%;
     }
   }
 }

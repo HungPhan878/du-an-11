@@ -37,6 +37,10 @@
     &--current {
       color: inherit;
     }
+
+    @include abstracts.breakpoint(md) {
+      font-size: 1.4rem;
+    }
   }
 
   &-icon {
