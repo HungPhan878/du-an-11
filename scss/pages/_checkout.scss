@@ -141,6 +141,14 @@
     &-label {
       font-weight: 400;
     }
+
+    &--block {
+      @include abstracts.breakpoint(sm) {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+      }
+    }
   }
 
   &__separate {
@@ -189,12 +197,27 @@
       content: url(../icons/checked.svg);
     }
   }
+
+  &__check--all {
+    margin: 30px 0;
+  }
+
+  &__all-check-out-btn {
+    max-width: 150px;
+    height: 46px;
+
+    font-size: 1.8rem;
+
+    @include abstracts.breakpoint(sm) {
+      min-width: 100%;
+    }
+  }
 }
+// End: cart-info
 
 // cart item
 .cart-item {
   display: flex;
-  gap: 30px;
   padding: 30px 0;
   border-bottom: 1px solid var(--cart-item-separate-bottom);
 
@@ -212,11 +235,11 @@
 
     @include abstracts.breakpoint(md) {
       margin-top: -16px;
-      gap: 16px;
     }
   }
 
   &__thumb {
+    margin: 0 30px 0 20px;
     width: 175px;
     height: 172px;
     object-fit: contain;
@@ -232,6 +255,7 @@
     }
 
     @include abstracts.breakpoint(md) {
+      margin: 0 16px;
       width: 60px;
       height: 60px;
     }
@@ -270,6 +294,17 @@
     color: #67b044;
   }
 
+  &__ctrls-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
   &__ctrl {
     margin-top: 16px;
     display: flex;
@@ -278,12 +313,14 @@
     min-height: 44px;
 
     &--vertical {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+      @include abstracts.breakpoint(md) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -305,6 +342,18 @@
   &__input-btn {
     display: flex;
     align-items: center;
+  }
+
+  &__checkout-btn {
+    min-width: 125px;
+    height: 46px;
+
+    font-size: 1.8rem;
+
+    @include abstracts.breakpoint(md) {
+      margin-top: 16px;
+      max-width: 200px;
+    }
   }
 
   &__content-right {

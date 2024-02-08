@@ -2929,6 +2929,13 @@ html.dark {
 .cart-info__row-label {
   font-weight: 400;
 }
+@media screen and (max-width: 575.98px) {
+  .cart-info__row--block {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
 .cart-info__separate {
   margin: 30px 0;
   height: 1px;
@@ -2968,10 +2975,22 @@ html.dark {
 .cart-info__radio-input:checked::before {
   content: url(../icons/checked.svg);
 }
+.cart-info__check--all {
+  margin: 30px 0;
+}
+.cart-info__all-check-out-btn {
+  max-width: 150px;
+  height: 46px;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 575.98px) {
+  .cart-info__all-check-out-btn {
+    min-width: 100%;
+  }
+}
 
 .cart-item {
   display: flex;
-  gap: 30px;
   padding: 30px 0;
   border-bottom: 1px solid var(--cart-item-separate-bottom);
 }
@@ -2990,10 +3009,10 @@ html.dark {
 @media screen and (max-width: 767.98px) {
   .cart-item:first-child {
     margin-top: -16px;
-    gap: 16px;
   }
 }
 .cart-item__thumb {
+  margin: 0 30px 0 20px;
   width: 175px;
   height: 172px;
   object-fit: contain;
@@ -3012,6 +3031,7 @@ html.dark {
 }
 @media screen and (max-width: 767.98px) {
   .cart-item__thumb {
+    margin: 0 16px;
     width: 60px;
     height: 60px;
   }
@@ -3044,6 +3064,17 @@ html.dark {
 .cart-item__status {
   color: #67b044;
 }
+.cart-item__ctrls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .cart-item__ctrls-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .cart-item__ctrl {
   margin-top: 16px;
   display: flex;
@@ -3051,12 +3082,14 @@ html.dark {
   gap: 20px;
   min-height: 44px;
 }
-.cart-item__ctrl--vertical {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+@media screen and (max-width: 767.98px) {
+  .cart-item__ctrl--vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
-@media screen and (max-width: 575.98px) {
+@media screen and (max-width: 767.98px) {
   .cart-item__ctrl {
     flex-direction: column;
     align-items: flex-start;
@@ -3077,6 +3110,17 @@ html.dark {
 .cart-item__input-btn {
   display: flex;
   align-items: center;
+}
+.cart-item__checkout-btn {
+  min-width: 125px;
+  height: 46px;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 767.98px) {
+  .cart-item__checkout-btn {
+    margin-top: 16px;
+    max-width: 200px;
+  }
 }
 .cart-item__content-right {
   display: flex;
