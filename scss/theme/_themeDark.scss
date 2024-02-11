@@ -109,6 +109,18 @@ html.dark {
   // payment page
   --payment-bg: #292e39;
 
+  // profile page
+  --profile-sidebar-bg: #171c28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+  --profile-link-hover-bg: #2f3441;
+
+  // account 
+  --account-item-bg:#292E39;
+  --account-item-icon-bg:#171C28;
+
+  // separate
+  --separate-bg:#292E39;
+
   @include abstracts.breakpoint(lg) {
     // header
     --header-boxshadow-color: rgba(0, 0, 0, 0.2);

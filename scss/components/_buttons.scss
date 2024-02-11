@@ -54,13 +54,13 @@
 
   height: 38px;
   padding: 0 10px;
+  border-radius: 6px;
   font-size: 1.5rem;
   font-weight: 500;
   white-space: nowrap;
 
   background-color: #f8f8fb;
-  border-radius: 6px;
-
+  cursor: pointer;
   + .btn {
     &:not(.btn-no-margin) {
       margin-left: 20px;
