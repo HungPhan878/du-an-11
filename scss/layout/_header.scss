@@ -232,6 +232,27 @@
       }
     }
 
+    &__user {
+      position: relative;
+
+      &:hover .act-dropdown {
+        display: block;
+      }
+    }
+
+    &__dropdown {
+      // display: block !important;
+      right: 0 !important;
+    }
+
+    &__dropdown-inner {
+      width: min(300px, 100vw) !important;
+    }
+
+    &__dropdown-arrow {
+      right: 15px !important;
+    }
+
     &__avatar {
       @include abstracts.image(50px);
       border-radius: 8px;
@@ -368,5 +389,56 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.46; /* 146.667% */
+  }
+}
+
+// user menu
+.user-menu {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+
+    border-radius: 10px;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+
+    &:hover {
+      color: #77dae6;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+  }
+
+  &__separate {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--separate-color);
   }
 }

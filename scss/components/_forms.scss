@@ -400,4 +400,19 @@ $error-color: #f44336;
       color: var(--text-color);
     }
   }
+
+  // new .form
+  &-row {
+    display: flex;
+    gap: 30px;
+
+    & > * {
+      flex: 1;
+    }
+
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
 }

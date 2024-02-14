@@ -1645,6 +1645,19 @@ html.dark {
 .form__btn:hover {
   color: var(--text-color);
 }
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+.form-row > * {
+  flex: 1;
+}
+@media screen and (max-width: 575.98px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 
 .message {
   width: 100%;
@@ -2209,6 +2222,21 @@ html.dark {
   height: 30px;
   background-color: var(--separate-color);
 }
+.header-act__user {
+  position: relative;
+}
+.header-act__user:hover .act-dropdown {
+  display: block;
+}
+.header-act__dropdown {
+  right: 0 !important;
+}
+.header-act__dropdown-inner {
+  width: min(300px, 100vw) !important;
+}
+.header-act__dropdown-arrow {
+  right: 15px !important;
+}
 .header-act__avatar {
   width: 50px;
   height: 50px;
@@ -2319,6 +2347,46 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.46; /* 146.667% */
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.user-menu__name {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 0;
+}
+.user-menu__link:hover {
+  color: #77dae6;
+}
+.user-menu__icon {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
 }
 
 #footer {
@@ -3011,7 +3079,15 @@ html.dark {
   justify-content: space-between;
   gap: 30px;
 }
+.cart-info__arrow-back {
+  position: relative;
+  top: 3px;
+  padding-right: 20px;
+  width: 50px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.41; /* 141.667% */
@@ -3648,6 +3724,26 @@ html.dark {
   margin-top: 6px;
   font-size: 1.4rem;
   line-height: 142.857%;
+}
+
+.add-new__container {
+  margin-top: 20px;
+}
+
+.form-card__label.lv3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.form-bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 575.98px) {
+  .form-bottom__btn {
+    flex: 1;
+  }
 }
 
 .col, .row > *, .container-fluid, .container {
